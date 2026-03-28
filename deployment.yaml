@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: ci-cd-test
-          image: engralvz/ci-cd-test:latest
+          image: engralvz/ci-cd-test:v2
           ports:
             - containerPort: 3000
