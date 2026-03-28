@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ci-cd-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ci-cd-test
+  template:
+    metadata:
+      labels:
+        app: ci-cd-test
+    spec:
+      containers:
+        - name: ci-cd-test
+          image: engralvz/ci-cd-test:latest
+          ports:
+            - containerPort: 3000
